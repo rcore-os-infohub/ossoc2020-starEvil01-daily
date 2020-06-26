@@ -21,3 +21,7 @@
 
 
 ## Day1
+
+> 开始学习rCore
+>
+> - 安装rustup
