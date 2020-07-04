@@ -5,6 +5,6 @@
 .history
 
 /rustlings/*
-!/rustlings/exercises/**/*.rs
+!/rustlings/exercises/**
 
 
