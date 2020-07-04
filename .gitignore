@@ -2,3 +2,6 @@
 
 /projects
 **/target
+/rustlings/**
+/rustlings/exercises/target
+!/rustlings/exercises/**/**.rs
