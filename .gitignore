@@ -5,7 +5,6 @@
 .history
 .gitignore
 /rustlings
-
 !/rustlings/exercises
 
 
