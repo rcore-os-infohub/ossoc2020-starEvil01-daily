@@ -3,8 +3,9 @@
 /projects
 **/target
 .history
-.ignore
+.gitignore
 /rustlings
+
 !/rustlings/exercises
 
 
