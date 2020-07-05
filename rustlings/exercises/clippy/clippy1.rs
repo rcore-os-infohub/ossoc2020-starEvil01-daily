@@ -4,7 +4,6 @@
 //
 // Execute `rustlings hint clippy1` for hints :)
 
-// I AM NOT DONE
 
 fn main() {
     let x = 1.2331f64;
