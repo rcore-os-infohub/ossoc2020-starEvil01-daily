@@ -5,7 +5,7 @@
 | Mon | Tues | Wed | Thur | Fri | Sat | Sun |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 |   |   | 1 | 2 | 3 | 4<br>([D1](#day1)) | 5<br>([D2](#day2)) |
-| 6 | 7 | 8 | 9 |  10  | 11 | 12 |
+| 6<br>([D3](#day3)) | 7 | 8 | 9 |  10  | 11 | 12 |
 | 13 | 14 | 15 | 16 | 17 | 18 | 19 |
 | 20 | 21 | 22 | 23 | 24 | 25 | 26 |
 | 27 | 28 | 29 | 30 | 31 |  |  |
@@ -61,7 +61,7 @@ let mut age = match age {
 
 ## Day2
 
-### 事件1 学习剩余的《Rust程序设计语言》17~20章
+### 事件1： 学习剩余的《Rust程序设计语言》17~20章
 
 [《Rust程序设计语言》](https://kaisery.github.io/trpl-zh-cn/ch18-02-refutability.html)
 
@@ -77,4 +77,51 @@ let mut age = match age {
 
 ## Day3
 
-> 第三天
+### 事件1：阅读《Rust编程之道》
+
+#### 第二章
+
+- non_snake_case：rust的包命名习惯，如果想使用驼峰命名，需要添加：` #![allow(non_snake_case)]`
+
+  > struct的命名还是使用驼峰式命名规则
+
+- 《Rust编程之道》，2-5的代码，书中提到代码第7行的错误已经不会再出现。
+
+- 1..101：是一个Range类型，它是一个迭代器。
+
+- 范围匹配 `1...3` 现在的版本建议为 `1..=3`
+
+  > 1..3: [1, 2] (std::ops::Range), 1..=3: [1, 2, 3] (std::ops::RangeInclusive)
+
+- bool as i32: true -> 1, false -> 0；i32 as bool: 不允许
+
+- #[derive(Debug, PartialEq)]: 让结构体自动实现 Debug trait 和 PartialEq trait，它们的功能是允许结构体实例进行打印和比较。
+
+- “{:?}”：只有实现了 Debug trait，才用有“{:?}”格式化打印的行为。
+
+#### 第三章
+
+- Rust的类型分类
+  - Sized Type：可确定大小类型
+  - Dynamic Sized Type (DST)：动态大小类型
+  - Zero Sized Type (ZST)：零大小类型
+  - Bottom Type：底类型， eg: `!`
+
+- 两种转换类型的parse()
+  - `let int_x: i32 = x.parse().unwrap();`
+  - `x.parse()::<i32>().unwrap()`
+
+  > `::<>` 叫作 turbofish 操作符
+
+- 泛型及单态化：单态化静态分发的好处是性能好，没有运行时开销；缺点是容易造成编译后生成的二进制文件膨胀。（并不影响使用Rust编程）
+- <font color=red>孤儿规则： 产生的原因是不是源自可能有默认的 Deref trait，才存在可能影响到其它和T或 ‘a T</font>
+
+- <font color=red>重叠规则：泛型会单例化，而且重叠trait的实现具象化程度不同（相同的话就产生了歧义），那么是不是之间可以在编译时就已经可以为不同情况单例出不同的trait实现选择呢？</font>
+
+#### 第五章
+
+- 借用： 共享不可变，可变不共享
+
+#### 第六章
+
+- fn的函数名称通常以“蛇形命名法（snake_case）”命名
