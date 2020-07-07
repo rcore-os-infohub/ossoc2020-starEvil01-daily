@@ -4,5 +4,5 @@ fn main() {
         Some(s) => println!("{:?}", s),
         _ => println!("nothing"),
     }
-    println!("Hello, world! {:?}", a);
+    // println!("Hello, world! {:?}", a);
 }
