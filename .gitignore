@@ -7,3 +7,5 @@
 rustlings/*
 !/rustlings/exercises
 
+*.exe
+*.pdb
